@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <style>
+      body {
+              margin: 0;
+              padding: 0;
+              font-family: Arial, sans-serif;
+
+
+            }
+      nav {
+              background-color: white;
+              color: black;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              padding: 10px;
+              box-sizing: border-box;
+              border: solid;
+              border-radius: 5px;
+              border-color: green ;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+            }
+      nav ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              justify-content: space-between;
+
+            }
+      nav li a {
+              text-decoration: none;
+              padding: 10px;
+              border-radius: 5px;
+              font-weight: bold;
+            }
+      nav li a:hover {
+              background-color: green ;
+              color: black;
+              font-weight: bold;
+            }
+
+
+      nav li a:visited {
+              background-color: green;
+              color: black; 
+              font-weight: bold;
+            }
+
+
+
+      header {
+              background-color: white;
+              padding: 5px;
+              text-align: center;
+              top: 50px;
+              font-size: large;
+              font-weight: bolder;
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              border-color: green;
+              color: black;
+              margin-top: 75px;
+              
+            
+
+            }
+
+      h1 {
+              border: solid;
+              border-radius: 2px;
+              border-color: black;
+
+              
+            }
+
+      a:link {
+              color: wheat;
+            }
+
+      a:visited {
+              color: black;
+              background-color: red;
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+      a:active {
+              color: darkgreen;
+            }
+
+            
+      footer {
+                background-color: white;
+                color: black;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                left: 0px;
+                right: 0px;
+                text-align: center;
+                border: solid;
+                border-radius: 5px;
+                bottom: 0px;
+                position: relative;
+                font-size: large;
+                color: black;
+                border-color: green;
+
+              }
+
+
+
+      .history {
+                color: black;
+                margin: 100px;
+                padding: 10px;
+                line-height: 30px;
+                font-size: medium;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                border: solid;
+                font-size: large;
+
+                
+              }
+
+      .logo {
+                text-align: center;
+                
+              }
+
+      main {
+                background-color: white;
+              }
+
+              
+      .tablica {
+                border: solid;
+                text-align: center;
+                box-sizing: border-box;
+                display: table;
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                bottom: 10%;
+                font-size: large;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                line-height: 25px;
+                padding: 10px;
+                border-color: green;
+              }
+
+      .cena {
+                margin-top: 50px;
+                margin-bottom: 30px;
+                padding: 10px;
+                margin-left: 425px;
+                font-size: large;
+                text-align: center;
+                font-size: large;
+                font-weight: bolder;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              }
+
+          .mcena {
+                text-align: center;
+                font-size: large;
+                font-weight: bolder;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                border: solid;
+                margin-left: 650px;
+                margin-right: 650px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                padding: 20px;
+              }
+
+      .h2 {
+              background-color: wheat;
+              padding: 5px;
+              text-align: center;
+              position: relative;
+              top: 50px;
+              font-size: large;
+              font-weight: bolder;
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              position: relative;
+              }
+
+      .maps {
+                  text-align: center;
+                  margin-top: 50px;
+
+
+                }
+                
+      .info {
+                  margin: 40px;
+                  font-size: large;
+                  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                  line-height: 25px;
+
+              }
+      .video {
+                  text-align: center;
+                  margin-top: 70px;
+                  left: 50%;
+                }
+      .text {
+                      margin: 40px;
+                      font-size: large;
+                      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                      line-height: 25px;
+                    }
+      </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+          <li><a href="C:\Users\Я\WEB\ТНС ЭНЕРГО\tnsenergo\aboutcompany.html">О компании</a></li>
+          <li><a href="C:\Users\Я\WEB\ТНС ЭНЕРГО\tnsenergo\financevalue.html">Основные финансовые показатели</a></li>
+          <li><a href="C:\Users\Я\WEB\ТНС ЭНЕРГО\tnsenergo\contacts.html">Контакты</a></li>
+          <li><a href="C:\Users\Я\WEB\ТНС ЭНЕРГО\tnsenergo\video.html">Видео</a></li>
+
+        </ul>
+      </nav>
+    <main>
+        <header>
+          Интерактивная карта отделений компании
+        </header>
+        <div class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d70837.20263538609!2d43.86393036229902!3d56
+        .30113714458006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4151d50cf74ad507%3A0xa294ca06d003ac89!2z0KLQndChLdCt0
+        L3QtdGA0LPQviDQndCd!5e0!3m2!1sru!2sru!4v1684835607323!5m2!1sru!2sru" width="1200px" height="800px"></iframe>
+        </div>
+        <div class="info">
+          Вы также можете воспользоваться автоматическими сервисами Единого контактного центра, позвонив по телефону 8 (4852) 280-363. Телефон работает ежедневно и круглосуточно.
+        </div>
+        <div class="info">
+          Подать информацию о смене собственника можно онлайн на сайте <a href="https://rostov.tns-e.ru/population/"><b><u><i>«ТНС»</i></u></b></a> К заявлению необходимо приложить паспортные данные нового владельца, фотографию документа, подтверждающего право собственности (выписка из ЕГРН), показания прибора учета, а также сведения о других зарегистрированных в жилом помещении лицах.
+        </div>
+        <div class="info">
+          Телефонные номера аварийной службы ТСЖ или ДУК обычно висят в каждом подъезде многоэтажного дома. Вы также можете позвонить по телефону бесплатной «горячей линии» 8 800 220-0-220.
+        </div>
+        <div class="info">
+          Hовому собственнику необходимо зафиксировать показания индивидуального прибора учета электроэнергии на момент приобретения прав на него. Лучше всего указать эти показания в акте приема-передачи объекта соответствующей недвижимости, подписанным с прежним собственником.
+        </div>
+
+
+        <div class="tablica">
+          <table border="1">
+            <tbody>
+              <tr>
+                <th>Адрес</th>
+                <th>Телефон</th>
+                <th>Начальник</th>
+              </tr>
+              <tr>
+                <td>606400, Нижегородская область, Балахнинский район, г. Балахна, ул. Энгельса, д. 9</td>
+                <td>8 (831) 233-09-70</td>
+                <td>Меличаев Евгений Евгеньевич</td>
+              </tr>
+              <tr>
+                <td>606500, Нижегородская область, Городецкий район, г.Городец, ул.Кирова, д.34</td>
+                <td>8 (831) 233-09-70</td>
+                <td>Доскин Александр Геннадьевич</td>
+              </tr>
+              <tr>
+                <td>606670, Нижегородская область, Сокольский район, п.Сокольское, ул.Механизаторов, д.12</td>
+                <td>8 (831) 233-09-70</td>
+                <td>Сиденин Владимир Владимирович</td>
+              </tr>
+              <tr>
+                <td>606540, Нижегородская область, Чкаловский район, г.Чкаловск, ул.Лесная, д.2</td>
+                <td>8 (831) 233-09-70</td>
+                <td>Петрухин Дмитрий Андреевич</td>
+              </tr>
+              <tr>
+                <td>607060, Нижегородская область, Выксунский район, г. Выкса, ул. Жилкооперации, д.14</td>
+                <td>8 (831) 233-09-70</td>
+                <td>Пудова Марина Валерьевна</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </main>
+    <footer>
+        Многоканальный телефон - +7 (495) 287-24-84
+    </footer>
+</body>
+</html>
