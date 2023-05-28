@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основные финансовые показатели</title>
+    <style>
+          body {
+              margin: 0;
+              padding: 0;
+              font-family: Arial, sans-serif;
+
+
+            }
+          nav {
+              background-color: white;
+              color: black;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              padding: 10px;
+              box-sizing: border-box;
+              border: solid;
+              border-radius: 5px;
+              border-color: green ;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+            }
+          nav ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              justify-content: space-between;
+
+            }
+          nav li a {
+              text-decoration: none;
+              padding: 10px;
+              border-radius: 5px;
+              font-weight: bold;
+            }
+          nav li a:hover {
+              background-color: green ;
+              color: black;
+              font-weight: bold;
+            }
+
+
+        nav li a:visited {
+              background-color: green;
+              color: black; 
+              font-weight: bold;
+            }
+
+
+          header {
+              margin-top: 50px;
+              background-color: white;
+              padding: 5px;
+              text-align: center;
+              font-size: large;
+              font-weight: bolder;
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+
+            }
+
+          h1 {
+              border: solid;
+              border-radius: 2px;
+              border-color: black;
+
+              
+            }
+
+          a:link {
+              color: wheat;
+            }
+
+
+
+          a:active {
+              color: darkgreen;
+            }
+
+            
+          footer {
+                background-color: white;
+                color: black;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                left: 0px;
+                right: 0px;
+                text-align: center;
+                border: solid;
+                border-radius: 5px;
+                bottom: 0px;
+                position: relative;
+                font-size: large;
+                border-color: green;
+
+              }
+
+
+
+          .history {
+                color: black;
+                margin: 100px;
+                padding: 10px;
+                line-height: 30px;
+                font-size: medium;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                border: solid;
+                font-size: large;
+
+                
+              }
+
+          .logo {
+                text-align: center;
+                
+              }
+
+          main {
+                background-color: white;
+              }
+
+              
+          .tablica {
+                border: solid;
+                text-align: left;
+                left: 50%;
+                box-sizing: border-box;
+                display: table;
+                margin: auto;
+                bottom: 10%;
+                font-size: large;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                line-height: 25px;
+                margin: 10px;
+                padding: 10px;
+              }
+
+          .cena {
+                margin-top: 50px;
+                margin-bottom: 30px;
+                padding: 10px;
+                margin-left: 425px;
+                font-size: large;
+                text-align: center;
+                font-size: large;
+                font-weight: bolder;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              }
+
+              .mcena {
+                text-align: center;
+                font-size: large;
+                font-weight: bolder;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                border: solid;
+                margin-left: 650px;
+                margin-right: 650px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                padding: 20px;
+                border-color: green;
+              }
+
+          .h2 {
+              background-color: white;
+              padding: 5px;
+              text-align: center;
+              position: relative;
+              top: 50px;
+              font-size: large;
+              font-weight: bolder;
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              position: relative;
+              border-color: green;
+              }
+
+          .maps {
+                  text-align: center;
+                  margin-top: 50px;
+
+
+                }
+                
+          .info {
+                  margin: 40px;
+                  font-size: large;
+                  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                  line-height: 25px;
+
+              }
+          .video {
+                  text-align: center;
+                  margin-top: 70px;
+                  left: 50%;
+                }
+          .text {
+                      margin: 40px;
+                      font-size: large;
+                      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                      line-height: 25px;
+                    }
+      </style>
+      <script>
+          function calculate() {
+
+              var table = document.getElementById("myTable");
+
+              var values = Array.from(table.querySelectorAll('td.price')).map(function(cell) {
+                return Number(cell.innerHTML);
+              });
+
+              var maxVal = Math.max(...values);
+
+              var minVal = Math.min(...values);
+
+              var sumSq = values.reduce(function(sum, value) {
+                return sum + value * value;
+              }, 0);
+
+              var avgVal = Math.sqrt(sumSq / values.length);
+
+              document.getElementById("max").innerHTML = maxVal;
+              document.getElementById("min").innerHTML = minVal;
+              document.getElementById("avg").innerHTML = avgVal;
+              }
+      </script>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="C:\Users\Я\WEB\ТНС ЭНЕРГО\tnsenergo\aboutcompany.html">О компании</a></li>
+          <li><a href="C:\Users\Я\WEB\ТНС ЭНЕРГО\tnsenergo\financevalue.html">Основные финансовые показатели</a></li>
+          <li><a href="C:\Users\Я\WEB\ТНС ЭНЕРГО\tnsenergo\contacts.html">Контакты</a></li>
+          <li><a href="C:\Users\Я\WEB\ТНС ЭНЕРГО\tnsenergo\video.html">Видео</a></li>
+
+        </ul>
+      </nav>
+    <main>
+      <header>
+        Котировка цены акции компании ТНС ЭНЕРГО
+      </header>
+
+      <div class="cena">
+      <table border="1" id="myTable">
+
+        <tr>
+          <td>1.04.2023</td>
+          <td>4.04.2023</td>
+          <td>7.04.2023</td>
+          <td>10.04.2023</td>
+          <td>13.04.2023</td>
+          <td>16.04.2023</td>
+          <td>19.04.2023</td>
+          <td>23.04.2023</td>
+          <td>26.04.2023</td>
+          <td>30.04.2023</td>
+        </tr>
+
+        <tr>
+          <td class="price">970</td>
+          <td class="price">1031</td>
+          <td class="price">1132</td>
+          <td class="price">1097</td>
+          <td class="price">1006</td>
+          <td class="price">976</td>
+          <td class="price">1040</td>
+          <td class="price">1091</td>
+          <td class="price">981</td>
+          <td class="price">968</td>
+         </tr>
+
+       </table>
+      </div>
+
+      <div class="h2">
+        Основные показатели на Московской бирже
+      </div>
+
+      <div class="mcena">
+       <button onclick="calculate()">Рассчитать основные показатели</button>
+
+       <p>Maximum Value: <span id="max"></span></p>
+
+       <p>Minimum Value: <span id="min"></span></p>
+
+       <p>Average Value: <span id="avg"></span></p>
+      </div>
+
+      <div class="h2">
+        Капитализация на конец апреля
+      </div>
+
+      <div class="mcena">
+        12 916 485 855 ₽
+      </div>
+
+      <div class="h2">
+        Общее количество акций (депозитарных расписок), обращающихся на Московской фондовой бирже
+      </div>
+
+      <div class="mcena">
+        1 167 000 
+      </div>
+
+
+    </main>
+
+    <footer>
+      Россия, Нижегородская область, Нижегородская область, Нижний Новгород, Бекетова, 3В     
+    </footer>
+</body>
+
+</html>
